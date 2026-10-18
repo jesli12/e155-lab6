@@ -1,5 +1,8 @@
 // DS1722.h
-// TODO: <YOUR NAME>
-// TODO: <YOUR EMAIL>
-// TODO: <DATE>
-// TODO: <SHORT DESCRIPTION OF WHAT THIS FILE DOES>
+/*
+Author: Jessica Li
+Email: jesli@hmc.edu
+Date: 10/17/2026
+TODO: <SHORT DESCRIPTION OF WHAT THIS FILE DOES>
+*/
+
