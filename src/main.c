@@ -119,7 +119,7 @@ int main(void) {
     }
 
     // set temp resolution over SPI
-    resConfig = getResConfig(request);
+    resConfig = getResConfig(request, resConfig);
     writeDS1722(resConfig);
 
     // Read temp (SPI)
