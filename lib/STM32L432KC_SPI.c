@@ -19,6 +19,8 @@ TODO: <SHORT DESCRIPTION OF WHAT THIS FILE DOES>
  * Refer to the datasheet for more low-level details. */ 
 void initSPI(int br, int cpol, int cpha){
     // make sure clock tree is configured before
+    // ensure SPI disabled for config (enabled at end)
+    SPI1->CR1 &= ~SPI_CR1_SPE;
     // turn on SPI clock domain
     RCC->APB2ENR |= (RCC_APB2ENR_SPI1EN);
     // steps to configure SPI parameters are given in the STM32 Reference Manual Section 40.4.7 Page 1313

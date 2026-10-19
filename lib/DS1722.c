@@ -41,5 +41,11 @@ float readDS1722(){
     int t_msb = spiSendReceive(0x00);
     digitalWrite(CS_PIN, PIO_LOW);
 
-    return t_msb + (t_lsb/256.0); // gotta make sure t_lsb is /2^8 to get the decimal value it represents
+    float temperature = t_msb + (t_lsb/256.0); // gotta make sure t_lsb is /2^8 to get the decimal value it represents
+
+    if (temperature > 256.0){
+        temperature = -(temperature - 256.0); // if temperature is negative
+    }
+
+    return temperature;
 }
