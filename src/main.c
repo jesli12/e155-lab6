@@ -56,19 +56,19 @@ char getResConfig(char request[], char currentConfig)
 {
 	char config = currentConfig;
 
-  if (inString(request, "/REQ:8\n")==1) {
+  if (inString(request, "/REQ:8")==1) {
 		config = 0b11100000; // [rs2, rs1, rs0] = 000
 	}
-	else if (inString(request, "/REQ:9\n")==1) {
+	else if (inString(request, "/REQ:9")==1) {
 		config = 0b11100010;
 	}
-  else if (inString(request, "/REQ:10\n")==1) {
+  else if (inString(request, "/REQ:10")==1) {
 		config = 0b11100100;
 	}
-  else if (inString(request, "/REQ:11\n")==1) {
+  else if (inString(request, "/REQ:11")==1) {
 		config = 0b11100110;
 	}
-  else if (inString(request, "/REQ:12\n")==1) {
+  else if (inString(request, "/REQ:12")==1) {
 		config = 0b11101000;
 	}
 
@@ -90,7 +90,9 @@ int main(void) {
   pinMode(LED_PIN, GPIO_OUTPUT);
   
   RCC->APB2ENR |= (RCC_APB2ENR_TIM15EN);
+  RCC->APB2ENR |= (RCC_APB2ENR_TIM16EN);
   initTIM(TIM15);
+  initTIM(TIM16);
   
   USART_TypeDef * USART = initUSART(USART1_ID, 125000);
 
@@ -100,6 +102,8 @@ int main(void) {
 
   char resConfig = 0xE2;
   char tempStr[20];
+  char resConfigStr[20];
+
 
   while(1) {
     /* Wait for ESP8266 to send a request.
@@ -119,9 +123,14 @@ int main(void) {
     }
 
     // set temp resolution over SPI
-    resConfig = getResConfig(request, resConfig);
-    writeDS1722(resConfig);
+    char newConfig = getResConfig(request, resConfig);
 
+    if (newConfig != resConfig){
+      resConfig = newConfig;
+      writeDS1722(resConfig);
+      //delay_millis(TIM16, 750);
+    }
+    
     // Read temp (SPI)
     float temp = readDS1722();
   
@@ -136,6 +145,8 @@ int main(void) {
 
     // print temperature
     sprintf(tempStr, "%f C", temp);
+    // sprintf(resConfigStr, "Request: %s", request);
+    sprintf(resConfigStr, "Res Config: 0x%02X", (unsigned char)resConfig);
 
     // finally, transmit the webpage over UART
     sendString(USART, webpageStart); // webpage header code
@@ -147,9 +158,14 @@ int main(void) {
     sendString(USART, ledStatusStr);
     sendString(USART, "</p>");
 
-    sendString(USART, "<h2>Resolution Status</h2>");
+    sendString(USART, "<h2>Temperature</h2>");
     sendString(USART, "<p>");
     sendString(USART, tempStr);
+    sendString(USART, "</p>");
+
+    sendString(USART, "<h2>Resolution</h2>");
+    sendString(USART, "<p>");
+    sendString(USART, resConfigStr);
     sendString(USART, "</p>");
 
   
