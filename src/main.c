@@ -21,15 +21,13 @@ char* webpageStart = "<!DOCTYPE html><html><head><title>E155 Web Server Demo Web
 	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\
 	</head>\
 	<body><h1>E155 Web Server Demo Webpage</h1>";
-char* ledStr = "<p>LED Control:</p>
-  <form action=\"ledon\"><input type=\"submit\" value=\"Turn the LED on!\"></form>\
+char* ledStr = "<p>LED Control:</p> <form action=\"ledon\"><input type=\"submit\" value=\"Turn the LED on!\"></form>\
 	<form action=\"ledoff\"><input type=\"submit\" value=\"Turn the LED off!\"></form>";
-char* resStr = "<p>Resolution Control:</p>
-<form action=\"8\"><input type=\"submit\" value=\"8 bits\"></form>\
-<form action=\"9\"><input type=\"submit\" value=\"9 bits\"></form>\
-<form action=\"10\"><input type=\"submit\" value=\"10 bits\"></form>\
-<form action=\"11\"><input type=\"submit\" value=\"11 bits\"></form>\
-<form action=\"12\"><input type=\"submit\" value=\"12 bits\"></form>";
+char* resStr = "<p>Resolution Control:</p> <form action=\"8\"><input type=\"submit\" value=\"8 bits\"></form>\
+  <form action=\"9\"><input type=\"submit\" value=\"9 bits\"></form>\
+  <form action=\"10\"><input type=\"submit\" value=\"10 bits\"></form>\
+  <form action=\"11\"><input type=\"submit\" value=\"11 bits\"></form>\
+  <form action=\"12\"><input type=\"submit\" value=\"12 bits\"></form>";
 char* webpageEnd   = "</body></html>";
 
 //determines whether a given character sequence is in a char array request, returning 1 if present, -1 if not present
