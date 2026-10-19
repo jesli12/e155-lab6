@@ -71,7 +71,7 @@ void initSPI(int br, int cpol, int cpha){
 
 /* Transmits a character (1 byte) over SPI and returns the received character.
  *    -- send: the character to send over SPI
- *    -- return: the character received over SPI 
+ *    -- return (rec): the character received over SPI 
  *    (RM p1306 for general overview, general procedure on p1314 section 40.4.9)*/
 char spiSendReceive(char send){
     // send (Tx shift register, transmit)
