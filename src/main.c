@@ -52,23 +52,23 @@ int updateLEDStatus(char request[])
 	return led_status;
 }
 
-char getResConfig(char request[])
+char getResConfig(char request[], char currentConfig)
 {
-	char config = 0b11100010; // see DS1722 p6, default case is 9 bit
+	char config = currentConfig;
 
-  if (inString(request, "8")==1) {
+  if (inString(request, "/REQ:8\n")==1) {
 		config = 0b11100000; // [rs2, rs1, rs0] = 000
 	}
-	else if (inString(request, "9")==1) {
+	else if (inString(request, "/REQ:8\n")==1) {
 		config = 0b11100010;
 	}
-  else if (inString(request, "10")==1) {
+  else if (inString(request, "/REQ:9\n")==1) {
 		config = 0b11100100;
 	}
-  else if (inString(request, "11")==1) {
+  else if (inString(request, "/REQ:10\n")==1) {
 		config = 0b11100110;
 	}
-  else if (inString(request, "12")==1) {
+  else if (inString(request, "/REQ:11\n")==1) {
 		config = 0b11101000;
 	}
 
