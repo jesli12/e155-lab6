@@ -11,6 +11,13 @@ Description: Configure SPI
 
 #include <stdint.h>
 #include <stm32l432xx.h>
+#include "STM32L432KC_GPIO.h"
+
+// Pin definitions (see STM32L432KC Datasheet Table 15. Alternate function AF0 to AF7 p56)
+#define MISO_PIN PB4
+#define MOSI_PIN PB5
+#define SCK_PIN  PB3
+#define CS_PIN   PB0 // CS --> to temp sensor
 
 ///////////////////////////////////////////////////////////////////////////////
 // Function prototypes
