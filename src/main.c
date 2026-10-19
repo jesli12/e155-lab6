@@ -90,9 +90,9 @@ int main(void) {
   pinMode(LED_PIN, GPIO_OUTPUT);
   
   RCC->APB2ENR |= (RCC_APB2ENR_TIM15EN);
-  RCC->APB2ENR |= (RCC_APB2ENR_TIM16EN);
   initTIM(TIM15);
-  initTIM(TIM16);
+  //RCC->APB2ENR |= (RCC_APB2ENR_TIM16EN);
+  // initTIM(TIM16);
   
   USART_TypeDef * USART = initUSART(USART1_ID, 125000);
 
@@ -128,7 +128,7 @@ int main(void) {
     if (newConfig != resConfig){
       resConfig = newConfig;
       writeDS1722(resConfig);
-      //delay_millis(TIM16, 750);
+      //delay_millis(TIM16, 750);  // can wait for Max Conversion Time given by DS1722 data sheet p6
     }
     
     // Read temp (SPI)
