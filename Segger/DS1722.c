@@ -42,7 +42,7 @@ float readDS1722(){
     digitalWrite(CS_PIN, PIO_LOW);
 
     if (t_msb >= 128) {
-        t_msb -= 256;
+        t_msb -= 128;
     }
 
     float temperature = t_msb + (t_lsb / 256.0f); // gotta make sure t_lsb is /2^8 to get the decimal value it represents
