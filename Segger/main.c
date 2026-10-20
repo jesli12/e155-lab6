@@ -91,8 +91,6 @@ int main(void) {
   
   RCC->APB2ENR |= (RCC_APB2ENR_TIM15EN);
   initTIM(TIM15);
-  //RCC->APB2ENR |= (RCC_APB2ENR_TIM16EN);
-  // initTIM(TIM16);
   
   USART_TypeDef * USART = initUSART(USART1_ID, 125000);
 
