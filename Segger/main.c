@@ -59,7 +59,7 @@ char getResConfig(char request[], char currentConfig)
   if (inString(request, "/REQ:8")==1) {
 		config = 0b11100000; // [rs2, rs1, rs0] = 000
 	}
-	else if (inString(request, "/REQ:9")==1) {
+  else if (inString(request, "/REQ:9")==1) {
 		config = 0b11100010;
 	}
   else if (inString(request, "/REQ:10")==1) {
