@@ -17,18 +17,42 @@ Date: 10/18/2026
 /////////////////////////////////////////////////////////////////
 
 //Defining the web page in two chunks: everything before the current time, and everything after the current time
-char* webpageStart = "<!DOCTYPE html><html><head><title>E155 Web Server Demo Webpage</title>\
-	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\
-	</head>\
-	<body><h1>E155 Web Server Demo Webpage</h1>";
-char* ledStr = "<p>LED Control:</p> <form action=\"ledon\"><input type=\"submit\" value=\"Turn the LED on!\"></form>\
-	<form action=\"ledoff\"><input type=\"submit\" value=\"Turn the LED off!\"></form>";
-char* resStr = "<p>Resolution Control:</p> <form action=\"8\"><input type=\"submit\" value=\"8 bits\"></form>\
-  <form action=\"9\"><input type=\"submit\" value=\"9 bits\"></form>\
-  <form action=\"10\"><input type=\"submit\" value=\"10 bits\"></form>\
-  <form action=\"11\"><input type=\"submit\" value=\"11 bits\"></form>\
-  <form action=\"12\"><input type=\"submit\" value=\"12 bits\"></form>";
-char* webpageEnd   = "</body></html>";
+// Compact, modern inline CSS embedded directly in C string literals
+char* webpageStart = 
+  "<!DOCTYPE html><html><head>"
+  "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+  "<style>"
+  "body{font-family:system-ui,sans-serif;background:#f0f2f5;color:#1c1e21;margin:0;padding:16px;display:flex;justify-content:center}"
+  ".card{background:#fff;border-radius:12px;padding:20px;max-width:400px;width:100%;box-shadow:0 4px 12px rgba(0,0,0,0.08)}"
+  "h1{font-size:20px;margin:0 0 16px;color:#007aff;text-align:center}"
+  "h2{font-size:14px;text-transform:uppercase;letter-spacing:0.5px;color:#65676b;margin:16px 0 6px}"
+  ".val{font-size:22px;font-weight:600;margin:0;padding:10px;background:#f7f8fa;border-radius:8px}"
+  ".btn-group{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}"
+  "form{flex:1;min-width:70px;margin:0}"
+  "input[type=submit]{width:100%;padding:10px;border:none;border-radius:6px;background:#007aff;color:#fff;font-weight:600;cursor:pointer}"
+  "input[type=submit]:hover{opacity:0.9}"
+  ".off{background:#8e8e93}"
+  "</style></head><body><div class=\"card\">"
+  "<h1>E155 Temp Monitor</h1>";
+
+char* ledStr = 
+  "<h2>LED Control</h2>"
+  "<div class=\"btn-group\">"
+  "<form action=\"ledon\"><input type=\"submit\" value=\"ON\"></form>"
+  "<form action=\"ledoff\"><input type=\"submit\" class=\"off\" value=\"OFF\"></form>"
+  "</div>";
+
+char* resStr = 
+  "<h2>Resolution Control</h2>"
+  "<div class=\"btn-group\">"
+  "<form action=\"REQ:8\"><input type=\"submit\" value=\"8-bit\"></form>"
+  "<form action=\"REQ:9\"><input type=\"submit\" value=\"9-bit\"></form>"
+  "<form action=\"REQ:10\"><input type=\"submit\" value=\"10-bit\"></form>"
+  "<form action=\"REQ:11\"><input type=\"submit\" value=\"11-bit\"></form>"
+  "<form action=\"REQ:12\"><input type=\"submit\" value=\"12-bit\"></form>"
+  "</div>";
+
+char* webpageEnd = "</div></body></html>";
 
 //determines whether a given character sequence is in a char array request, returning 1 if present, -1 if not present
 int inString(char request[], char des[]) {
@@ -146,27 +170,26 @@ int main(void) {
     // sprintf(resConfigStr, "Request: %s", request);
     sprintf(resConfigStr, "Res Config: 0x%02X", (unsigned char)resConfig);
 
-    // finally, transmit the webpage over UART
-    sendString(USART, webpageStart); // webpage header code
-    sendString(USART, ledStr); // button for controlling LED
-    sendString(USART, resStr); // buttons for controlling temp resolution
+    // transmit the webpage over UART
+    sendString(USART, webpageStart);
+    sendString(USART, ledStr);
+    sendString(USART, resStr);
 
     sendString(USART, "<h2>LED Status</h2>");
-    sendString(USART, "<p>");
+    sendString(USART, "<p class=\"val\">");
     sendString(USART, ledStatusStr);
     sendString(USART, "</p>");
 
     sendString(USART, "<h2>Temperature</h2>");
-    sendString(USART, "<p>");
+    sendString(USART, "<p class=\"val\">");
     sendString(USART, tempStr);
     sendString(USART, "</p>");
 
     sendString(USART, "<h2>Resolution</h2>");
-    sendString(USART, "<p>");
+    sendString(USART, "<p class=\"val\">");
     sendString(USART, resConfigStr);
     sendString(USART, "</p>");
 
-  
     sendString(USART, webpageEnd);
   }
 }

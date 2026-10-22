@@ -21,7 +21,7 @@ Memory use by input file:
   Object File                                       RX Code     RO Data     RW Data     ZI Data
   ---------------------------------------------  ----------  ----------  ----------  ----------
   DS1722.o                                              214                                    
-  main.o                                                808         925          16            
+  main.o                                                808       1 764          16            
   SEGGER_THUMB_Startup.o                                 20                                    
   STM32L432KC_FLASH.o                                    26                                    
   STM32L432KC_GPIO.o                                    422                                    
@@ -33,7 +33,7 @@ Memory use by input file:
   STM32L4xx_Startup.o                                    64                                    
   system_stm32l4xx.o                                    462          64           4            
   ---------------------------------------------  ----------  ----------  ----------  ----------
-  Subtotal (12 objects)                               3 560         989          20            
+  Subtotal (12 objects)                               3 560       1 828          20            
   ---------------------------------------------  ----------  ----------  ----------  ----------
   libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a
                                                       4 970         251                        
@@ -48,7 +48,7 @@ Memory use by input file:
   ---------------------------------------------  ----------  ----------  ----------  ----------
   Linker created (shared data, fills, blocks):                       76                   2 048
   =============================================  ==========  ==========  ==========  ==========
-  Total:                                              9 176       1 857          40       2 052
+  Total:                                              9 176       2 696          40       2 052
   =============================================  ==========  ==========  ==========  ==========
 
 Memory use by archive member:
@@ -79,10 +79,10 @@ Memory use by archive member:
                                                          58          24                        
   ---------------------------------------------  ----------  ----------  ----------  ----------
   Subtotal (11 members from 4 archives)               5 616         792          20           4
-  Objects (12 files)                                  3 560         989          20            
+  Objects (12 files)                                  3 560       1 828          20            
   Linker created (shared data, fills, blocks):                       76                   2 048
   =============================================  ==========  ==========  ==========  ==========
-  Total:                                              9 176       1 857          40       2 052
+  Total:                                              9 176       2 696          40       2 052
   =============================================  ==========  ==========  ==========  ==========
 
 Memory use by linker:
@@ -94,10 +94,10 @@ Memory use by linker:
   ---------------------------------------------  ----------  ----------  ----------  ----------
   Subtotal (linker created):                                         76                   2 048
   ---------------------------------------------  ----------  ----------  ----------  ----------
-  Objects (12 files)                                  3 560         989          20            
+  Objects (12 files)                                  3 560       1 828          20            
   Archives (4 files)                                  5 616         792          20           4
   =============================================  ==========  ==========  ==========  ==========
-  Total:                                              9 176       1 857          40       2 052
+  Total:                                              9 176       2 696          40       2 052
   =============================================  ==========  ==========  ==========  ==========
 
 
@@ -271,72 +271,72 @@ Sections by address:
                                                         12   2  Code  RX  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   080024EE-080024F9  __SEGGER_RTL_ascii_towlower
                                                         12   2  Code  RX  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  080024FA-08002508  [.rodata..L.str.3]                 15   1  Cnst  RO  main.o
-  08002509-0800250F  [.rodata..L.str.4]                  7   1  Cnst  RO  main.o
-  08002510-08002516  [.rodata..L.str.6]                  7   1  Cnst  RO  main.o
-  08002517-0800251D  [.rodata..L.str.7]                  7   1  Cnst  RO  main.o
-  0800251E-08002528  [.rodata..L.str.12]                11   1  Cnst  RO  main.o
-  08002529-0800253B  [.rodata..L.str.15]                19   1  Cnst  RO  main.o
-  0800253C-08002542  [.rodata.libc..L.str]               7   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  08002543-08002599  __SEGGER_RTL_c_locale_month_names
+  080024FA-080028C0  [.rodata..L.str]                  967   1  Cnst  RO  main.o
+  080028C1-080028C7  [.rodata..L.str.4]                  7   1  Cnst  RO  main.o
+  080028C8-080028CE  [.rodata..L.str.6]                  7   1  Cnst  RO  main.o
+  080028CF-080028D5  [.rodata..L.str.7]                  7   1  Cnst  RO  main.o
+  080028D6-080028E0  [.rodata..L.str.12]                11   1  Cnst  RO  main.o
+  080028E1-080028F3  [.rodata..L.str.15]                19   1  Cnst  RO  main.o
+  080028F4-080028FA  [.rodata.libc..L.str]               7   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  080028FB-08002951  __SEGGER_RTL_c_locale_month_names
                                                         87   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0800259A-080025A0  __SEGGER_RTL_c_locale_am_pm_indicator
+  08002952-08002958  __SEGGER_RTL_c_locale_am_pm_indicator
                                                          7   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  080025A1-080025AF  __SEGGER_RTL_c_locale_date_time_format
+  08002959-08002967  __SEGGER_RTL_c_locale_date_time_format
                                                         15   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  080025B0-08002671  [.rodata..L.str]                  194   1  Cnst  RO  main.o
-  08002672-080027C7  [.rodata..L.str.2]                342   1  Cnst  RO  main.o
-  080027C8-080027CD  [.rodata..L.str.5]                  6   1  Cnst  RO  main.o
-  080027CE-080027CF  [.rodata..L.str.11]                 2   1  Cnst  RO  main.o
-  080027D0-08002809  __SEGGER_RTL_c_locale_day_names
+  08002968-08002AE1  [.rodata..L.str.2]                378   1  Cnst  RO  main.o
+  08002AE2-08002AE7  [.rodata..L.str.5]                  6   1  Cnst  RO  main.o
+  08002AE8-08002AE9  [.rodata..L.str.11]                 2   1  Cnst  RO  main.o
+  08002AEA-08002B23  __SEGGER_RTL_c_locale_day_names
                                                         58   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0800280A-0800280B  [.rodata.libc..L.str]               2   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0800280C-0800280D  __SEGGER_RTL_data_utf8_period
+  08002B24-08002B25  [.rodata.libc..L.str]               2   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002B26-08002B27  __SEGGER_RTL_data_utf8_period
                                                          2   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0800280E-08002812  [.rodata..L.str.14]                 5   1  Cnst  RO  main.o
-  08002813-08002817  [.rodata..L.str.18]                 5   1  Cnst  RO  main.o
-  08002818-0800282C  [.rodata..L.str.19]                21   1  Cnst  RO  main.o
-  0800282D-08002831  [.rodata.libc..L.str.1]             5   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  08002832-08002836  [.rodata.libc..L.str.2]             5   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  08002837-0800283B  [.rodata.libc..L.str.3]             5   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0800283C-08002840  [.rodata.libc..L.str.4]             5   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  08002841-08002849  __SEGGER_RTL_c_locale_date_format
+  08002B28-08002B3C  [.rodata..L.str.3]                 21   1  Cnst  RO  main.o
+  08002B3D-08002B41  [.rodata..L.str.14]                 5   1  Cnst  RO  main.o
+  08002B42-08002B46  [.rodata..L.str.18]                 5   1  Cnst  RO  main.o
+  08002B47-08002B5B  [.rodata..L.str.19]                21   1  Cnst  RO  main.o
+  08002B5C-08002B60  [.rodata.libc..L.str.1]             5   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002B61-08002B65  [.rodata.libc..L.str.2]             5   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002B66-08002B6A  [.rodata.libc..L.str.3]             5   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002B6B-08002B6F  [.rodata.libc..L.str.4]             5   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002B70-08002B78  __SEGGER_RTL_c_locale_date_format
                                                          9   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0800284A-08002852  __SEGGER_RTL_c_locale_time_format
+  08002B79-08002B81  __SEGGER_RTL_c_locale_time_format
                                                          9   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  08002853-0800286F  __SEGGER_RTL_c_locale_abbrev_day_names
+  08002B82-08002B9E  __SEGGER_RTL_c_locale_abbrev_day_names
                                                         29   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  08002870-080028A0  __SEGGER_RTL_c_locale_abbrev_month_names
+  08002B9F-08002BCF  __SEGGER_RTL_c_locale_abbrev_month_names
                                                         49   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  080028A1-080028A1  __SEGGER_RTL_data_empty_string
+  08002BD0-08002BD0  __SEGGER_RTL_data_empty_string
                                                          1   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  080028A2-080028AE  __SEGGER_RTL_ascii_ctype_mask
+  08002BD1-08002BDD  __SEGGER_RTL_ascii_ctype_mask
                                                         13   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  080028AF-080028AF  ( UNUSED .=.+1 )                    1   -  ----  -   -
-  080028B0-080028B3  [.init_array]                       4   4  ----  --  STM32L4xx_Startup.o
-  080028B4-080028C3  AHBPrescTable                      16   1  Cnst  RO  system_stm32l4xx.o
-  080028C4-0800296F  [.rodata..L.str.1]                172   1  Cnst  RO  main.o
-  08002970-08002977  [.rodata..L.str.8]                  8   1  Cnst  RO  main.o
-  08002978-0800297F  [.rodata..L.str.9]                  8   1  Cnst  RO  main.o
-  08002980-08002987  [.rodata..L.str.10]                 8   1  Cnst  RO  main.o
-  08002988-080029A7  [.rodata..L__const.main.request]
+  08002BDE-08002BDF  ( UNUSED .=.+2 )                    2   -  ----  -   -
+  08002BE0-08002BE3  [.init_array]                       4   4  ----  --  STM32L4xx_Startup.o
+  08002BE4-08002BF3  AHBPrescTable                      16   1  Cnst  RO  system_stm32l4xx.o
+  08002BF4-08002CAB  [.rodata..L.str.1]                184   1  Cnst  RO  main.o
+  08002CAC-08002CB3  [.rodata..L.str.8]                  8   1  Cnst  RO  main.o
+  08002CB4-08002CBB  [.rodata..L.str.9]                  8   1  Cnst  RO  main.o
+  08002CBC-08002CC3  [.rodata..L.str.10]                 8   1  Cnst  RO  main.o
+  08002CC4-08002CE3  [.rodata..L__const.main.request]
                                                         32   1  Cnst  RO  main.o
-  080029A8-080029B3  [.rodata..L.str.13]                12   1  Cnst  RO  main.o
-  080029B4-080029C7  [.rodata..L.str.16]                20   1  Cnst  RO  main.o
-  080029C8-080029CB  [.rodata..L.str.17]                 4   1  Cnst  RO  main.o
-  080029CC-080029DF  [.rodata..L.str.20]                20   1  Cnst  RO  main.o
-  080029E0-080029EF  __SEGGER_RTL_hex_uc                16   1  Cnst  RO  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  080029F0-080029FF  __SEGGER_RTL_hex_lc                16   1  Cnst  RO  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  08002A00-08002A03  [.rodata.libc..L.str.5]             4   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  08002A04-08002A07  [.rodata.libc..L.str.6]             4   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  08002A08-08002A87  __SEGGER_RTL_ascii_ctype_map
+  08002CE4-08002CEF  [.rodata..L.str.13]                12   1  Cnst  RO  main.o
+  08002CF0-08002D03  [.rodata..L.str.16]                20   1  Cnst  RO  main.o
+  08002D04-08002D13  [.rodata..L.str.17]                16   1  Cnst  RO  main.o
+  08002D14-08002D27  [.rodata..L.str.20]                20   1  Cnst  RO  main.o
+  08002D28-08002D37  __SEGGER_RTL_hex_uc                16   1  Cnst  RO  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002D38-08002D47  __SEGGER_RTL_hex_lc                16   1  Cnst  RO  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002D48-08002D4B  [.rodata.libc..L.str.5]             4   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002D4C-08002D4F  [.rodata.libc..L.str.6]             4   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002D50-08002DCF  __SEGGER_RTL_ascii_ctype_map
                                                        128   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  08002A88-08002AAB  __SEGGER_init_ctors                36   4  Code  RX  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  08002AAC-08002ACF  __SEGGER_init_table__              36   4  Cnst  RO  [ Linker created ]
-  08002AD0-08002AF7  __SEGGER_init_data__               40   4  Cnst  RO  [ Linker created ]
-  08002AF8-08002B09  __SEGGER_init_zero                 18   2  Code  RX  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  08002B0A-08002B1D  __SEGGER_init_copy                 20   2  Code  RX  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  08002B1E-0FFFFFFF  ( UNUSED .=.+134206690 )   134 206 690
+  08002DD0-08002DF3  __SEGGER_init_ctors                36   4  Code  RX  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002DF4-08002E17  __SEGGER_init_table__              36   4  Cnst  RO  [ Linker created ]
+  08002E18-08002E3F  __SEGGER_init_data__               40   4  Cnst  RO  [ Linker created ]
+  08002E40-08002E51  __SEGGER_init_zero                 18   2  Code  RX  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002E52-08002E65  __SEGGER_init_copy                 20   2  Code  RX  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002E66-0FFFFFFF  ( UNUSED .=.+134205850 )   134 205 850
                                                              -  ----  -   -
   10000000-10000003  __SEGGER_RTL_locale_ptr             4   4  Zero  ZI  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   10000004-10000017  __SEGGER_RTL_global_locale
@@ -467,10 +467,10 @@ Function symbols by name:
   __SEGGER_RTL_vfprintf      0x08000B71       2 968      4  Code  Gb  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_vfprintf_short_float_long
                              0x08000B71       2 968      4  Code  Gb  __SEGGER_RTL_vfprintf_short_float_long.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  __SEGGER_init_copy         0x08002B0B          20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  __SEGGER_init_ctors        0x08002A89          26      4  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __SEGGER_init_copy         0x08002E53          20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __SEGGER_init_ctors        0x08002DD1          26      4  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_init_done         0x08000893                  4  Code  Gb  SEGGER_THUMB_Startup.o
-  __SEGGER_init_zero         0x08002AF9          18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __SEGGER_init_zero         0x08002E41          18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __aeabi_d2f                0x08000B25          76      4  Code  Wk  floatasmops_arm.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __aeabi_d2uiz              0x08000A5D          36      4  Code  Wk  floatasmops_arm.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __aeabi_ddiv               0x08001DBD         450      4  Code  Wk  floatasmops_arm.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
@@ -697,9 +697,9 @@ Function symbols by address:
                                                  12      2  Code  Lc  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   0x080024EF  __SEGGER_RTL_ascii_towlower
                                                  12      2  Code  Lc  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x08002A89  __SEGGER_init_ctors                26      4  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x08002AF9  __SEGGER_init_zero                 18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x08002B0B  __SEGGER_init_copy                 20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08002DD1  __SEGGER_init_ctors                26      4  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08002E41  __SEGGER_init_zero                 18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08002E53  __SEGGER_init_copy                 20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
 
 Function symbols by descending size:
 
@@ -919,43 +919,43 @@ Read-only data symbols by name:
 
   Symbol name                   Address        Size  Align  Type  Bd  Object File
   -------------------------  ----------  ----------  -----  ----  --  -----------
-  AHBPrescTable              0x080028B4          16         Cnst  Gb  system_stm32l4xx.o
+  AHBPrescTable              0x08002BE4          16         Cnst  Gb  system_stm32l4xx.o
   MSIRangeTable              0x080002EC          48      4  Cnst  Gb  system_stm32l4xx.o
   __SEGGER_RTL_aPower2f      0x08000A44          24      4  Cnst  Lc  utilops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_ascii_ctype_map
-                             0x08002A08         128         Cnst  Lc  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                             0x08002D50         128         Cnst  Lc  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_ascii_ctype_mask
-                             0x080028A2          13         Cnst  Lc  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                             0x08002BD1          13         Cnst  Lc  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_c_locale      0x080017CC          12      4  Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_c_locale_abbrev_day_names
-                             0x08002853          29         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                             0x08002B82          29         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_c_locale_abbrev_month_names
-                             0x08002870          49         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                             0x08002B9F          49         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_c_locale_am_pm_indicator
-                             0x0800259A           7         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                             0x08002952           7         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_c_locale_data
                              0x080017F8          88      4  Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_c_locale_date_format
-                             0x08002841           9         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                             0x08002B70           9         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_c_locale_date_time_format
-                             0x080025A1          15         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                             0x08002959          15         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_c_locale_day_names
-                             0x080027D0          58         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                             0x08002AEA          58         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_c_locale_month_names
-                             0x08002543          87         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                             0x080028FB          87         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_c_locale_time_format
-                             0x0800284A           9         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                             0x08002B79           9         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_codeset_ascii
                              0x080017D8          32      4  Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_data_empty_string
-                             0x080028A1           1         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                             0x08002BD0           1         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_data_utf8_period
-                             0x0800280C           2         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  __SEGGER_RTL_hex_lc        0x080029F0          16         Cnst  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  __SEGGER_RTL_hex_uc        0x080029E0          16         Cnst  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                             0x08002B26           2         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __SEGGER_RTL_hex_lc        0x08002D38          16         Cnst  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __SEGGER_RTL_hex_uc        0x08002D28          16         Cnst  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_ipow10        0x080001F0         160      8  Cnst  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  __SEGGER_init_data__       0x08002AD0        [40]      4  Cnst  Lc  [ Linker created ]
-  __SEGGER_init_table__      0x08002AAC        [36]      4  Cnst  Lc  [ Linker created ]
+  __SEGGER_init_data__       0x08002E18        [40]      4  Cnst  Lc  [ Linker created ]
+  __SEGGER_init_table__      0x08002DF4        [36]      4  Cnst  Lc  [ Linker created ]
 
 Read-only data symbols by address:
 
@@ -969,35 +969,35 @@ Read-only data symbols by address:
                                                  32      4  Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   0x080017F8  __SEGGER_RTL_c_locale_data
                                                  88      4  Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x08002543  __SEGGER_RTL_c_locale_month_names
+  0x080028FB  __SEGGER_RTL_c_locale_month_names
                                                  87         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x0800259A  __SEGGER_RTL_c_locale_am_pm_indicator
+  0x08002952  __SEGGER_RTL_c_locale_am_pm_indicator
                                                   7         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x080025A1  __SEGGER_RTL_c_locale_date_time_format
+  0x08002959  __SEGGER_RTL_c_locale_date_time_format
                                                  15         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x080027D0  __SEGGER_RTL_c_locale_day_names
+  0x08002AEA  __SEGGER_RTL_c_locale_day_names
                                                  58         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x0800280C  __SEGGER_RTL_data_utf8_period
+  0x08002B26  __SEGGER_RTL_data_utf8_period
                                                   2         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x08002841  __SEGGER_RTL_c_locale_date_format
+  0x08002B70  __SEGGER_RTL_c_locale_date_format
                                                   9         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x0800284A  __SEGGER_RTL_c_locale_time_format
+  0x08002B79  __SEGGER_RTL_c_locale_time_format
                                                   9         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x08002853  __SEGGER_RTL_c_locale_abbrev_day_names
+  0x08002B82  __SEGGER_RTL_c_locale_abbrev_day_names
                                                  29         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x08002870  __SEGGER_RTL_c_locale_abbrev_month_names
+  0x08002B9F  __SEGGER_RTL_c_locale_abbrev_month_names
                                                  49         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x080028A1  __SEGGER_RTL_data_empty_string
+  0x08002BD0  __SEGGER_RTL_data_empty_string
                                                   1         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x080028A2  __SEGGER_RTL_ascii_ctype_mask
+  0x08002BD1  __SEGGER_RTL_ascii_ctype_mask
                                                  13         Cnst  Lc  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x080028B4  AHBPrescTable                      16         Cnst  Gb  system_stm32l4xx.o
-  0x080029E0  __SEGGER_RTL_hex_uc                16         Cnst  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x080029F0  __SEGGER_RTL_hex_lc                16         Cnst  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x08002A08  __SEGGER_RTL_ascii_ctype_map
+  0x08002BE4  AHBPrescTable                      16         Cnst  Gb  system_stm32l4xx.o
+  0x08002D28  __SEGGER_RTL_hex_uc                16         Cnst  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08002D38  __SEGGER_RTL_hex_lc                16         Cnst  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08002D50  __SEGGER_RTL_ascii_ctype_map
                                                 128         Cnst  Lc  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
-  0x08002AAC  __SEGGER_init_table__            [36]      4  Cnst  Lc  [ Linker created ]
-  0x08002AD0  __SEGGER_init_data__             [40]      4  Cnst  Lc  [ Linker created ]
+  0x08002DF4  __SEGGER_init_table__            [36]      4  Cnst  Lc  [ Linker created ]
+  0x08002E18  __SEGGER_init_data__             [40]      4  Cnst  Lc  [ Linker created ]
 
 Untyped symbols by name:
 
@@ -1007,18 +1007,18 @@ Untyped symbols by name:
   __FLASH1_segment_size__    0x00040000                     ----  Gb  [ Linker created ]
   __FLASH1_segment_start__   0x08000000                     ----  Gb  [ Linker created ]
   __FLASH1_segment_used_end__
-                             0x08002B1E                     ----  Gb  [ Linker created ]
+                             0x08002E66                     ----  Gb  [ Linker created ]
   __FLASH1_segment_used_size__
-                             0x00002B1E                     ----  Gb  [ Linker created ]
+                             0x00002E66                     ----  Gb  [ Linker created ]
   __FLASH1_segment_used_start__
                              0x08000000                     ----  Gb  [ Linker created ]
   __FLASH_segment_end__      0x08040000                     ----  Gb  [ Linker created ]
   __FLASH_segment_size__     0x00040000                     ----  Gb  [ Linker created ]
   __FLASH_segment_start__    0x08000000                     ----  Gb  [ Linker created ]
   __FLASH_segment_used_end__
-                             0x08002B1E                     ----  Gb  [ Linker created ]
+                             0x08002E66                     ----  Gb  [ Linker created ]
   __FLASH_segment_used_size__
-                             0x00002B1E                     ----  Gb  [ Linker created ]
+                             0x00002E66                     ----  Gb  [ Linker created ]
   __FLASH_segment_used_start__
                              0x08000000                     ----  Gb  [ Linker created ]
   __HEAPSIZE__               0x00000400                     ----  Gb  [ Linker created ]
@@ -1047,8 +1047,8 @@ Untyped symbols by name:
                              0x10000000                     ----  Gb  [ Linker created ]
   __STACKSIZE_PROCESS__      0x00000000                     ----  Gb  [ Linker created ]
   __STACKSIZE__              0x00000800                     ----  Gb  [ Linker created ]
-  __ctors_end__              0x080028B4                     ----  Gb  [ Linker created ]
-  __ctors_start__            0x080028B0                     ----  Gb  [ Linker created ]
+  __ctors_end__              0x08002BE4                     ----  Gb  [ Linker created ]
+  __ctors_start__            0x08002BE0                     ----  Gb  [ Linker created ]
   __stack_end__              0x2000C000                     ----  Gb  [ Linker created ]
   __thread_pointer$          0x00000000                     ----  Gb  [ Linker created ]
   _vectors                   0x08000000       [396]    512  Code  Gb  stm32l432xx_Vectors.o
@@ -1066,9 +1066,9 @@ Untyped symbols by address:
   0x00000800  __STACKSIZE__                                 ----  Gb  [ Linker created ]
   0x00000800  __RAM2_segment_used_size__
                                                             ----  Gb  [ Linker created ]
-  0x00002B1E  __FLASH_segment_used_size__
+  0x00002E66  __FLASH_segment_used_size__
                                                             ----  Gb  [ Linker created ]
-  0x00002B1E  __FLASH1_segment_used_size__
+  0x00002E66  __FLASH1_segment_used_size__
                                                             ----  Gb  [ Linker created ]
   0x00004000  __RAM1_segment_size__                         ----  Gb  [ Linker created ]
   0x0000C000  __RAM2_segment_size__                         ----  Gb  [ Linker created ]
@@ -1082,11 +1082,11 @@ Untyped symbols by address:
                                                             ----  Gb  [ Linker created ]
   0x08000000  __FLASH1_segment_start__                      ----  Gb  [ Linker created ]
   0x0800018C  _vectors_end                             512  Code  Lc  stm32l432xx_Vectors.o
-  0x080028B0  __ctors_start__                               ----  Gb  [ Linker created ]
-  0x080028B4  __ctors_end__                                 ----  Gb  [ Linker created ]
-  0x08002B1E  __FLASH_segment_used_end__
+  0x08002BE0  __ctors_start__                               ----  Gb  [ Linker created ]
+  0x08002BE4  __ctors_end__                                 ----  Gb  [ Linker created ]
+  0x08002E66  __FLASH_segment_used_end__
                                                             ----  Gb  [ Linker created ]
-  0x08002B1E  __FLASH1_segment_used_end__
+  0x08002E66  __FLASH1_segment_used_end__
                                                             ----  Gb  [ Linker created ]
   0x08040000  __FLASH_segment_end__                         ----  Gb  [ Linker created ]
   0x08040000  __FLASH1_segment_end__                        ----  Gb  [ Linker created ]
@@ -1119,14 +1119,14 @@ Untyped symbols by address:
 Memory breakdown:
 
     9 176 bytes read-only  code    + 
-    1 857 bytes read-only  data    =  11 033 bytes read-only (total)
+    2 696 bytes read-only  data    =  11 872 bytes read-only (total)
     2 092 bytes read-write data
 
 Region summary:
 
   Name        Range                     Size                 Used               Unused       Alignment Loss
   ----------  -----------------  -----------  -------------------  -------------------  -------------------
-  FLASH       08000000-0803FFFF      262 144       11 037   4.21%      251 107  95.79%            0   0.00%
+  FLASH       08000000-0803FFFF      262 144       11 876   4.53%      250 268  95.47%            0   0.00%
   RAM1        10000000-10003FFF       16 384           44   0.27%       16 340  99.73%            0   0.00%
   RAM2        20000000-2000BFFF       49 152        2 048   4.17%       47 104  95.83%            0   0.00%
 
