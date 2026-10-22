@@ -126,7 +126,7 @@ int main(void) {
     if (newConfig != resConfig){
       resConfig = newConfig;
       writeDS1722(resConfig);
-      //delay_millis(TIM16, 750);  // can wait for Max Conversion Time given by DS1722 data sheet p6
+      
     }
     
     // Read temp (SPI)
